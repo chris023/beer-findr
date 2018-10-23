@@ -6,7 +6,9 @@ class SearchCard extends Component {
 
   render() {
     return (
-      SearchCard
+      <p>
+        SearchCard
+      </p>
     )
   }
 }

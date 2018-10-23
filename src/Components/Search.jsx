@@ -6,7 +6,9 @@ class Search extends Component {
 
   render() {
     return (
-      Search
+      <p>
+        Search
+      </p>
     )
   }
 }

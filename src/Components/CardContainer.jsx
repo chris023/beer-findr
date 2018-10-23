@@ -6,7 +6,9 @@ class CardContainer extends Component {
 
   render() {
     return (
-      CardContainer
+      <p>
+        CardContainer
+      </p>
     )
   }
 }
