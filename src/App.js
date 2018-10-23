@@ -9,7 +9,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <h1>Beer Findr</h1>
+        <h2></h2>
         <Search />
         <CardContainer />
       </div>
