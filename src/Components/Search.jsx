@@ -6,9 +6,10 @@ class Search extends Component {
 
   render() {
     return (
-      <p>
-        Search
-      </p>
+      <form>
+        <input type="text" placeholder="Style or Taste Profile" />
+        <button>Search</button>
+      </form>
     )
   }
 }
