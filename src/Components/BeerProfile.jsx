@@ -6,7 +6,9 @@ class BeerProfile extends Component {
 
   render() {
     return (
-      BeerProfile
+      <p>
+        BeerProfile
+      </p>
     )
   }
 }
