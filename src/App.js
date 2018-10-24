@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Search from './Components/Search';
@@ -9,7 +8,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      searchResults: []
+      searchResults: [],
+      cardContainerVisible: false
     }
   }
 
@@ -17,13 +17,25 @@ class App extends Component {
 
   }
 
+  setCardContainerVisible = (visibility) => {
+    this.setState({
+      cardContainerVisible: visibility
+    })
+  }
+
   render() {
     return (
-      <div>
-        <h1>Beer Findr</h1>
-        <h2></h2>
-        <Search setSearchResults={ this.setSearchResults } />
-        <CardContainer results={ this.state.searchResults } />
+      <div className="App">
+        <div className="inside-App">
+          <h1>Beer Findr</h1>
+          <h2>Search Colorado's Best Beers</h2>
+          <div className="center Search-container">
+            <Search setSearchResults={this.setSearchResults} />
+          </div>
+          <div className="center Card-container">
+            <CardContainer setCardContainerVisible={this.setCardContainerVisible} results={this.state.searchResults} />
+          </div>
+        </div>
       </div>
     );
   }
