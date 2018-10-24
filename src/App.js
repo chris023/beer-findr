@@ -13,8 +13,10 @@ class App extends Component {
     }
   }
 
-  setSearchResults = () => {
-
+  setSearchResults = (searchResults) => {
+    this.setState({
+      searchResults: searchResults
+    })
   }
 
   setCardContainerVisible = (visibility) => {

@@ -14,6 +14,7 @@ class CardContainer extends Component {
   showResults() {
     return (
       <SearchResults
+        results= {this.props.results}
         // beerImg={}
         // beerName={}
         // brewery={}
