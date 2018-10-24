@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import '../Styles/CardContainer.css';
-import SearchCard from './SearchCard.jsx';
+import SearchResults from './SearchResults.jsx';
 
 class CardContainer extends Component {
   constructor() {
@@ -13,7 +13,7 @@ class CardContainer extends Component {
 
   showResults() {
     return (
-      <SearchCard
+      <SearchResults
         // beerImg={}
         // beerName={}
         // brewery={}
@@ -23,7 +23,7 @@ class CardContainer extends Component {
 
   showProfile() {
     return (
-      <SearchCard 
+      <SearchResults 
         // beerImg={}
         // beerName={} 
         // brewery={} 

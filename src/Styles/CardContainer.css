@@ -1,0 +1,14 @@
+.card-container {
+  background: #C4C4C48A;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(219px, 1fr));
+  grid-gap: 50px;
+  margin: 50px;
+  padding: 50px;
+  width: 100%;
+}
+
+.beer-img {
+  height: 328px;
+  width: 100%;
+}

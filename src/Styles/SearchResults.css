@@ -1,0 +1,13 @@
+.beer-card {
+  align-items: center;
+  background: #7c1b0dbb;
+  border: solid 1px #000;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.beer-card > * {
+  color: #fff;
+}

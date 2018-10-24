@@ -13,7 +13,7 @@ const coloradoBeer = [
       'tequila',
       'spicy'
       ],
-    image: 'https://imgur.com/2BUsyQa'
+    image: 'https://i.imgur.com/2BUsyQa.jpg'
   },
   {
     name: 'The Kaiser',
@@ -30,7 +30,7 @@ const coloradoBeer = [
       'molasses',
       'toffee'
       ],
-    image: 'https://imgur.com/xnKi7eB'
+    image: 'https://i.imgur.com/xnKi7eB.jpg'
   },
   {
     name: 'Maharaja',
@@ -47,7 +47,7 @@ const coloradoBeer = [
       'pine',
       'tropical'
       ],
-    image: 'https://imgur.com/NTtpnBh'
+    image: 'https://i.imgur.com/NTtpnBh.jpg'
   },
   {
     name: 'Old Jubilation',
@@ -65,7 +65,7 @@ const coloradoBeer = [
       'molasses',
       'toffee'
       ],
-    image: 'https://imgur.com/fG3ogvA'
+    image: 'https://i.imgur.com/fG3ogvA.jpg'
   },
   {
     name: 'Tweak',
@@ -82,7 +82,7 @@ const coloradoBeer = [
       'maple',
       'bourbon'
       ],
-    image: 'https://imgur.com/KdsvqYw'
+    image: 'https://i.imgur.com/KdsvqYw.jpg'
   },
   {
     name: 'White Rascal',
@@ -97,7 +97,7 @@ const coloradoBeer = [
       'coriander',
       'clove'
       ],
-    image: 'https://imgur.com/SHgcZA2'
+    image: 'https://i.imgur.com/SHgcZA2.jpg'
   },
   {
     name: 'BBA Here Be Monsters',
@@ -112,7 +112,7 @@ const coloradoBeer = [
       'chocolate',
       'toffee'
       ],
-    image: 'https://imgur.com/RCALF0i'
+    image: 'https://i.imgur.com/RCALF0i.jpg'
   },
   {
     name: 'Nightmare on Brett (red wine casks)',
@@ -130,7 +130,7 @@ const coloradoBeer = [
       'oaky',
       'heavy'
       ],
-    image: 'https://imgur.com/9AB6D9l'
+    image: 'https://i.imgur.com/9AB6D9l.jpg'
   },
   {
     name: 'Origins',
@@ -147,7 +147,7 @@ const coloradoBeer = [
       'dry',
       'oaky'
       ],
-    image: 'https://imgur.com/gKEGEkR'
+    image: 'https://i.imgur.com/gKEGEkR.jpg'
   },
   {
     name: 'Surette Provision',
@@ -164,7 +164,7 @@ const coloradoBeer = [
       'butter',
       'rustic'
       ],
-    image: 'https://imgur.com/PXMgz3q'
+    image: 'https://i.imgur.com/PXMgz3q.jpg'
   },
   {
     name: 'Vielle Artisinal Saison',
@@ -180,7 +180,7 @@ const coloradoBeer = [
       'lemon',
       'tangy'
       ],
-    image: 'https://imgur.com/UaEFjZc'
+    image: 'https://i.imgur.com/UaEFjZc.jpg'
   },
   {
     name: 'Bligh\'s Barleywine',
@@ -196,7 +196,7 @@ const coloradoBeer = [
       'syrup',
       'butterscotch'
       ],
-    image: 'https://imgur.com/yugtrro'
+    image: 'https://i.imgur.com/yugtrro.jpg'
   },
   {
     name: 'Big Bad Baptista',
@@ -212,7 +212,7 @@ const coloradoBeer = [
       'coffee',
       'vanilla'
       ],
-    image: 'https://imgur.com/TYYwzR2'
+    image: 'https://i.imgur.com/TYYwzR2.jpg'
   },
   {
     name: 'Double Barrel Big Bad Baptist',
@@ -229,7 +229,7 @@ const coloradoBeer = [
       'smokey',
       'roasted'
       ],
-    image: 'https://imgur.com/poSMZo7'
+    image: 'https://i.imgur.com/poSMZo7.jpg'
   },
   {
     name: 'BBA Malice and Darkness',
@@ -246,7 +246,7 @@ const coloradoBeer = [
       'dark chocolate',
       'smokey'
       ],
-    image: 'https://imgur.com/ObCeKHL'
+    image: 'https://i.imgur.com/ObCeKHL.jpg'
   },
   {
     name: 'Raspberry Provicial',
@@ -261,7 +261,7 @@ const coloradoBeer = [
       'tart',
       'raspberry'
       ],
-    image: 'https://imgur.com/nEZgzuZ'
+    image: 'https://i.imgur.com/nEZgzuZ.jpg'
   },
   {
     name: 'Ten',
@@ -278,7 +278,7 @@ const coloradoBeer = [
       'caramel',
       'toffee'
       ],
-    image: 'https://imgur.com/1FVsJfr'
+    image: 'https://i.imgur.com/1FVsJfr.jpg'
   },
   {
     name: 'Fresh Hop Pale Ale',
@@ -295,7 +295,7 @@ const coloradoBeer = [
       'spicy',
       'dry'
       ],
-    image: 'https://imgur.com/ffCT1Fu'
+    image: 'https://i.imgur.com/ffCT1Fu.jpg'
   },
   {
     name: 'Hoss Oktoberfest Lager',
@@ -311,7 +311,7 @@ const coloradoBeer = [
       'malty',
       'dry'
       ],
-    image: 'https://imgur.com/msDGpA5'
+    image: 'https://i.imgur.com/msDGpA5.jpg'
   },
   {
     name: 'St. Vrain',
@@ -328,7 +328,7 @@ const coloradoBeer = [
       'stone fruit',
       'bready'
       ],
-    image: 'https://imgur.com/DSLCtk5'
+    image: 'https://i.imgur.com/DSLCtk5.jpg'
   },
   {
     name: 'Blackberry Barleywine',
@@ -342,7 +342,7 @@ const coloradoBeer = [
       'blackberry',
       'rich'
       ],
-    image: 'https://imgur.com/xonYxsF'
+    image: 'https://i.imgur.com/xonYxsF.jpg'
   },
   {
     name: 'La Folie',
@@ -358,7 +358,7 @@ const coloradoBeer = [
       'oaky',
       'balanced'
       ],
-    image: 'https://imgur.com/n0OvUOe'
+    image: 'https://i.imgur.com/n0OvUOe.jpg'
   },
   {
     name: 'Trippel',
@@ -375,7 +375,7 @@ const coloradoBeer = [
       'coriander',
       'anise'
       ],
-    image: 'https://imgur.com/ASfHVsU'
+    image: 'https://i.imgur.com/ASfHVsU.jpg'
   },
   {
     name: 'Easy Street Wheat',
@@ -390,7 +390,7 @@ const coloradoBeer = [
       'bready',
       'crisp'
       ],
-    image: 'https://imgur.com/2rook8H'
+    image: 'https://i.imgur.com/2rook8H.jpg'
   },
   {
     name: 'Mercenary DIPA',
@@ -405,7 +405,7 @@ const coloradoBeer = [
       'grassy',
       'hoppy'
       ],
-    image: 'https://imgur.com/VaXHWHN'
+    image: 'https://i.imgur.com/VaXHWHN.jpg'
   },
   {
     name: 'St. Lupulin',
@@ -421,7 +421,7 @@ const coloradoBeer = [
       'bready',
       'balanced'
       ],
-    image: 'https://imgur.com/1n1HIOQ'
+    image: 'https://i.imgur.com/1n1HIOQ.jpg'
   },
   {
     name: 'Dale\'s Pale Ale',
@@ -437,7 +437,7 @@ const coloradoBeer = [
       'malty',
       'balanced'
       ],
-    image: 'https://imgur.com/XzcM5eW'
+    image: 'https://i.imgur.com/XzcM5eW.jpg'
   },
   {
     name: 'Pinner',
@@ -453,7 +453,7 @@ const coloradoBeer = [
       'tangerine',
       'hoppy'
       ],
-    image: 'https://imgur.com/AVhiW18'
+    image: 'https://i.imgur.com/AVhiW18.jpg'
   },
   {
     name: 'Ten FIDY',
@@ -467,7 +467,7 @@ const coloradoBeer = [
       'light roast',
       'fruit'
       ],
-    image: 'https://imgur.com/lg0XxrO'
+    image: 'https://i.imgur.com/lg0XxrO.jpg'
   },
   {
     name: 'Rum Barrel Ten FIDY',
@@ -484,7 +484,7 @@ const coloradoBeer = [
       'cocoa',
       'clove'
       ],
-    image: 'https://imgur.com/KYmDJjF'
+    image: 'https://i.imgur.com/KYmDJjF.jpg'
   },
   {
     name: 'Java BBA Ten FIDY',
@@ -500,7 +500,7 @@ const coloradoBeer = [
       'kahlua',
       'dark fruit'
       ],
-    image: 'https://imgur.com/0Z2EG08'
+    image: 'https://i.imgur.com/0Z2EG08.jpg'
   },
   {
     name: 'BBA Nightmare Fuel',
@@ -518,7 +518,7 @@ const coloradoBeer = [
       'dark fruit',
       'chocolate'
       ],
-    image: 'https://imgur.com/2rook8H'
+    image: 'https://i.imgur.com/2rook8H.jpg'
   },
   {
     name: 'Mr. Sandman',
@@ -534,7 +534,7 @@ const coloradoBeer = [
       'roasted',
       'molasses'
       ],
-    image: 'https://imgur.com/V2vIiMy'
+    image: 'https://i.imgur.com/V2vIiMy.jpg'
   },
   {
     name: 'Rudie',
@@ -549,7 +549,7 @@ const coloradoBeer = [
       'caramel',
       'tropical'
       ],
-    image: 'https://imgur.com/Y1I6lC5'
+    image: 'https://i.imgur.com/Y1I6lC5.jpg'
   },
   {
     name: 'Juicy Banger',
@@ -563,7 +563,7 @@ const coloradoBeer = [
       'toasty',
       'tropical'
       ],
-    image: 'https://imgur.com/XnoFmjf'
+    image: 'https://i.imgur.com/XnoFmjf.jpg'
   },
   {
     name: 'Space Wrangler',
@@ -577,7 +577,7 @@ const coloradoBeer = [
       'hoppy',
       'juicy'
       ],
-    image: 'https://imgur.com/NZC2XIK'
+    image: 'https://i.imgur.com/NZC2XIK.jpg'
   },
   {
     name: 'Christmas Ale',
@@ -594,7 +594,7 @@ const coloradoBeer = [
       'clove',
       'dried fruit'
       ],
-    image: 'https://imgur.com/Qf5ys3E'
+    image: 'https://i.imgur.com/Qf5ys3E.jpg'
   },
   {
     name: 'Juicy Bits',
@@ -609,7 +609,7 @@ const coloradoBeer = [
       'orange',
       'hazy'
       ],
-    image: 'https://imgur.com/39Wjl2i'
+    image: 'https://i.imgur.com/39Wjl2i.jpg'
   },
   {
     name: 'Mocha Achromatic',
@@ -626,7 +626,7 @@ const coloradoBeer = [
       'chocolate',
       'currant'
       ],
-    image: 'https://imgur.com/UrVaRQZ'
+    image: 'https://i.imgur.com/UrVaRQZ.jpg'
   },
   {
     name: 'Peppermint Mocha Achromatic',
@@ -641,7 +641,7 @@ const coloradoBeer = [
       'chocolate',
       'coffee'
       ],
-    image: 'https://imgur.com/Y0cqrCR'
+    image: 'https://i.imgur.com/Y0cqrCR.jpg'
   }
 ];
 
