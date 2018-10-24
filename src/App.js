@@ -9,7 +9,8 @@ class App extends Component {
     super();
     this.state = {
       searchResults: [],
-      cardContainerVisible: false
+      cardContainerVisible: false,
+      view: 0
     }
   }
 
@@ -17,6 +18,11 @@ class App extends Component {
     this.setState({
       searchResults: searchResults
     })
+
+    if (searchResults.length)
+      this.setState({
+        view: 1
+      })
   }
 
   setCardContainerVisible = (visibility) => {
@@ -35,7 +41,11 @@ class App extends Component {
             <Search setSearchResults={this.setSearchResults} />
           </div>
           <div className="center Card-container">
-            <CardContainer setCardContainerVisible={this.setCardContainerVisible} results={this.state.searchResults} />
+            <CardContainer 
+              setCardContainerVisible={this.setCardContainerVisible} 
+              results={this.state.searchResults} 
+              view={this.state.view}
+            />
           </div>
         </div>
       </div>

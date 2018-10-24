@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import '../Styles/CardContainer.css';
 import SearchResults from './SearchResults.jsx';
+import BeerProfile from './BeerProfile.jsx';
 
 class CardContainer extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      viewState: 1
+      profile: {}
     }
   }
 
@@ -24,31 +25,36 @@ class CardContainer extends Component {
 
   showProfile() {
     return (
-      <SearchResults 
+      <div className="card-container">
+        <BeerProfile 
         // beerImg={}
         // beerName={} 
         // brewery={} 
         // beerStyle={} 
         // abv={} 
         // tastingNotes={}
-      />
+        />
+      </div>
+      
     )
   }
 
   render() {
     let display = '';
 
-    if (this.state.viewState === 1) {
-      display = this.showResults()
-    } else if (this.state.viewState === 2) {
+    if (this.props.view === 1) {
+      display = (
+        <div className="card-container">
+          {this.showResults()}
+        </div>
+      )
+
+    } else if (this.props.view === 2) {
       display = this.showProfile()
     };
 
-    return (
-      <div className="card-container">
-        {display}
-      </div>
-    )
+    return display
+      
   }
 }
 
