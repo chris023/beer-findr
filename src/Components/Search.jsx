@@ -17,7 +17,7 @@ class Search extends Component {
   componentDidMount() {
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/coloradoBeer')
       .then(response => response.json())
-      .then(triviaQuestions => {
+      .then(coloradoBeer => {
         this.setState({
           coloradoBeers: coloradoBeer,
         })
@@ -26,7 +26,7 @@ class Search extends Component {
 
     fetch('https://whateverly-datasets.herokuapp.com/api/v1/coloradoBreweries')
       .then(response => response.json())
-      .then(triviaQuestions => {
+      .then(coloradoBreweries => {
         this.setState({
           coloradoBreweries: coloradoBreweries,
         })
