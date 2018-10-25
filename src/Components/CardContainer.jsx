@@ -15,10 +15,8 @@ class CardContainer extends Component {
   showResults() {
     return (
       <SearchResults
-        results= {this.props.results}
-        // beerImg={}
-        // beerName={}
-        // brewery={}
+        results={this.props.results}
+        breweries={this.props.breweries}
       />
     )
   }
@@ -26,21 +24,14 @@ class CardContainer extends Component {
   showProfile() {
     return (
       <div className="card-container">
-        <BeerProfile 
-        // beerImg={}
-        // beerName={} 
-        // brewery={} 
-        // beerStyle={} 
-        // abv={} 
-        // tastingNotes={}
-        />
+        <BeerProfile />
       </div>
       
     )
   }
 
   render() {
-    let display = '';
+    let display = null;
 
     if (this.props.view === 1) {
       display = (

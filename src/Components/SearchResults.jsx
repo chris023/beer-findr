@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { coloradoBeer, coloradoBreweries } from '../beer-data';
 
 import '../Styles/SearchResults.css';
 
@@ -7,10 +6,9 @@ import '../Styles/SearchResults.css';
 class SearchResults extends Component {
 
   render() {
-
     return (
       this.props.results.map((beer) => {
-        let brewery = coloradoBreweries.find((brewery) => {
+        let brewery = this.props.breweries.find((brewery) => {
           return beer.breweryID === brewery.breweryID
         })
         return (

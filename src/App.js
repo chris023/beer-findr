@@ -10,7 +10,9 @@ class App extends Component {
     this.state = {
       searchResults: [],
       cardContainerVisible: false,
-      view: 0
+      view: 0,
+      coloradoBeers: [],
+      coloradoBreweries: [],
     }
   }
 
@@ -31,6 +33,27 @@ class App extends Component {
     })
   }
 
+  componentDidMount() {
+    fetch('https://whateverly-datasets.herokuapp.com/api/v1/coloradoBeer')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          coloradoBeers: data.coloradoBeer,
+        })
+      })
+      .catch(error => console.log(error));
+
+    fetch('https://whateverly-datasets.herokuapp.com/api/v1/coloradoBreweries')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          coloradoBreweries: data.coloradoBreweries,
+        })
+      })
+      .catch(error => console.log(error))
+    
+  }
+
   render() {
     return (
       <div className="App">
@@ -38,12 +61,16 @@ class App extends Component {
           <h1>Beer Findr</h1>
           <h2>Search Colorado's Best Beers</h2>
           <div className="center Search-container">
-            <Search setSearchResults={this.setSearchResults} />
+            <Search 
+              beers={this.state.coloradoBeers} 
+              setSearchResults={this.setSearchResults}
+            />
           </div>
           <div className="center Card-container">
             <CardContainer 
               setCardContainerVisible={this.setCardContainerVisible} 
               results={this.state.searchResults} 
+              breweries={this.state.coloradoBreweries}
               view={this.state.view}
             />
           </div>
