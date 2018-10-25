@@ -15,11 +15,24 @@ class Search extends Component {
   }
 
   componentDidMount() {
-    //do fetch calls here
-    this.setState({
-      coloradoBeers: coloradoBeer,
-      coloradoBreweries: coloradoBreweries
-    })
+    fetch('https://whateverly-datasets.herokuapp.com/api/v1/coloradoBeer')
+      .then(response => response.json())
+      .then(triviaQuestions => {
+        this.setState({
+          coloradoBeers: coloradoBeer,
+        })
+      })
+      .catch(error => console.log(error));
+
+    fetch('https://whateverly-datasets.herokuapp.com/api/v1/coloradoBreweries')
+      .then(response => response.json())
+      .then(triviaQuestions => {
+        this.setState({
+          coloradoBreweries: coloradoBreweries,
+        })
+      })
+      .catch(error => console.log(error))
+    
   }
 
   searchBeers = (e) => {
