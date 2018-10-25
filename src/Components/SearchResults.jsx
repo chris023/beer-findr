@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { coloradoBeer } from '../beer-data';
+import { coloradoBeer, coloradoBreweries } from '../beer-data';
 
 import '../Styles/SearchResults.css';
 
@@ -9,12 +9,15 @@ class SearchResults extends Component {
   render() {
 
     return (
-      coloradoBeer.map((beer) => {
+      this.props.results.map((beer) => {
+        let brewery = coloradoBreweries.find((brewery) => {
+          return beer.breweryID === brewery.breweryID
+        })
         return (
-          <div className="beer-card">
-            <img className="beer-img" src={beer.image} />
+          <div className="beer-card" key={beer.name}>
+            <img className="beer-img" src={beer.image} alt={beer.name}/>
             <p>{beer.name}</p>
-            <p>Brewery</p>
+            <p>{brewery.name}</p>
           </div>
         )
       })
