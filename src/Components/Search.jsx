@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import '../Styles/Search.css';
-import { coloradoBeer, coloradoBreweries } from '../beer-data';
+// import { coloradoBeer, coloradoBreweries } from '../beer-data';
 
 class Search extends Component {
   constructor() {
@@ -15,11 +15,24 @@ class Search extends Component {
   }
 
   componentDidMount() {
-    //do fetch calls here
-    this.setState({
-      coloradoBeers: coloradoBeer,
-      coloradoBreweries: coloradoBreweries
-    })
+    fetch('https://whateverly-datasets.herokuapp.com/api/v1/coloradoBeer')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          coloradoBeers: data.coloradoBeer,
+        })
+      })
+      .catch(error => console.log(error));
+
+    fetch('https://whateverly-datasets.herokuapp.com/api/v1/coloradoBreweries')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          coloradoBreweries: data.coloradoBreweries,
+        })
+      })
+      .catch(error => console.log(error))
+    
   }
 
   searchBeers = (e) => {
