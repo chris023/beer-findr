@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import '../Styles/Search.css';
-import { coloradoBeer, coloradoBreweries } from '../beer-data';
+// import { coloradoBeer, coloradoBreweries } from '../beer-data';
 
 class Search extends Component {
   constructor() {
