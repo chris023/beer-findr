@@ -5,12 +5,20 @@ import '../Styles/BeerProfile.css';
 class BeerProfile extends Component {
 
   render() {
-    return (
-      <p>
-        BeerProfile
-      </p>
-    )
+      let profile = this.props.results.find((beer) => {
+        return beer.name === this.props.beerName
+      })
+      return (
+          <div className="beer-profile">
+            <img className="beer-img" src={profile.image} alt={profile.name} />
+            <p>{profile.name}</p>
+            <p>{profile.abv}</p>
+            <p>{profile.styles}</p>
+            <p>{profile.tastingNotes}</p> 
+          </div>
+        )
   }
 }
 
 export default BeerProfile;
+            // <p>{brewery.name}</p>

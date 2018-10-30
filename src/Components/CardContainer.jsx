@@ -17,6 +17,7 @@ class CardContainer extends Component {
       <SearchResults
         results={this.props.results}
         breweries={this.props.breweries}
+        changeView={this.props.changeView}
       />
     )
   }
@@ -24,7 +25,11 @@ class CardContainer extends Component {
   showProfile() {
     return (
       <div className="card-container">
-        <BeerProfile />
+        <BeerProfile
+          beerName={this.props.beerName}
+          results={this.props.results}
+          breweries={this.props.breweries} 
+        />
       </div>
       
     )

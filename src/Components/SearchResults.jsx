@@ -12,8 +12,8 @@ class SearchResults extends Component {
           return beer.breweryID === brewery.breweryID
         })
         return (
-          <div className="beer-card" key={beer.name}>
-            <img className="beer-img" src={beer.image} alt={beer.name}/>
+          <div className="beer-card" data={beer.name} key={beer.name} onClick={this.props.changeView} >
+            <img className="beer-img" src={beer.image} alt={beer.name} />
             <p>{beer.name}</p>
             <p>{brewery.name}</p>
           </div>
