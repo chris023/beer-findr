@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { coloradoBeer } from '../beer-data';
 
-import '../Styles/SearchResults.css';
-
-
 class SearchResults extends Component {
 
   render() {

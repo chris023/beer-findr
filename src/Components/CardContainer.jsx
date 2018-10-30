@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-import '../Styles/CardContainer.css';
 import SearchResults from './SearchResults.jsx';
 
 class CardContainer extends Component {

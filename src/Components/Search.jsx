@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import '../Styles/Search.css';
-
 class Search extends Component {
   constructor() {
     super();
@@ -21,10 +19,12 @@ class Search extends Component {
 
   render() {
     return (
-      <form>
-        <input type="text" placeholder="Style or Taste Profile" onChange={ this.autoComplete } />
-        <button onClick={ this.searchBeers } >Search</button>
-      </form>
+      <div className="Search">
+        <form>
+          <input type="text" placeholder="Style or Taste Profile" onChange={ this.autoComplete } />
+          <button onClick={ this.searchBeers } >Search</button>
+        </form>
+      </div>
     )
   }
 }
