@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
-// @import './styles/BeerProfile.scss';
-// @import './styles/CardContainer.scss';
-// @import './styles/Header.scss';
-// @import './styles/Search';
-// @import './styles/SearchResults.scss';
-
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+@import url("https://fonts.googleapis.com/css?family=Titan+One");
 
 .App {
   background-image: url('./assets/st-826688_1920.jpg');
@@ -36,7 +32,8 @@
 h1{
   color: #fff;
   font-family: 'Permanent Marker', cursive;
-  font-size: 64px;
+  text-shadow: black 0px 0px 18px;
+  font-size: 96px;
   text-align: center;
   margin: 10px;
   margin-top: 150px;
@@ -44,6 +41,12 @@ h1{
 
 h2 {
   color: #fff;
-  font-size: 18px;
+  // text-shadow: black 0px 0px 18px;
+  text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+  font-size: 22px;
   text-align: center;
 }
