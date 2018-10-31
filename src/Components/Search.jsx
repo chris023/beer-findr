@@ -34,16 +34,19 @@ class Search extends Component {
     //1 instantiate a new Trie
     let trie = new Trie();
     //2 trie.populate it with whatever data a user can search for
-    let completableWords = this.props.beers.filter((beer) => {
-      let styles = beer.style.find((style) => {
-        return style.toLowerCase().includes(this.state.searchQuery) 
-      })
-      let notes = beer.tastingNotes.find((note) => {
-        return note.toLowerCase().includes(this.state.searchQuery)
-      })
 
-      return styles && notes
-    });
+    let styles = this.props.beers.reduce((styles, currBeer) => {
+      styles.push(...currBeer.style);
+      return styles
+    }, []);
+
+    let notes = this.props.beers.reduce((notes, currBeer) => {
+      notes.push(...currBeer.tastingNotes);
+      return notes
+    }, []);
+
+    let completableWords = styles.concat(notes);
+  
     trie.populate(completableWords);
     //3 the input that comes in from onchage event should be included in trie.suggest
     let lettersToFind = e.target.value;
