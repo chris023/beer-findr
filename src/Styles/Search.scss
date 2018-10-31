@@ -1,8 +1,10 @@
 .Search {
   width: 100%;
   display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: center; 
-  margin-top: 30px;
+  margin-top: 100px;
   margin-bottom: 60px;
   
   form{
@@ -39,5 +41,12 @@
 
   img {
     width: 30px;
+  }
+
+  .search-help {
+    color: white;
+    text-align: center;
+    text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+    font-weight: 700;
   }
 }

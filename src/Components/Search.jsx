@@ -11,21 +11,28 @@ class Search extends Component {
     }
   }
 
+  showAllBeers = (e) => {
+    this.props.setSearchResults(this.props.beers);
+  }
+
   searchBeers = (e) => {
     e.preventDefault()
-    let results = this.props.beers.filter((beer) => {
+    let results = this.search(this.state.searchQuery);
+    this.props.setSearchResults(results);
+  }
+
+  search = (searchQuery) => {
+    return this.props.beers.filter((beer) => {
 
       let styleIncludes = beer.style.find((style) => {
-        return style.toLowerCase().includes(this.state.searchQuery) 
+        return style.toLowerCase().includes(searchQuery)
       })
       let notesIncludes = beer.tastingNotes.find((note) => {
-        return note.toLowerCase().includes(this.state.searchQuery)
+        return note.toLowerCase().includes(searchQuery)
       })
 
       return styleIncludes || notesIncludes
     })
-
-    this.props.setSearchResults(results);
   }
 
   autoComplete = (e) => {
@@ -43,6 +50,7 @@ class Search extends Component {
             <img src={magnifier} alt=""/>
           </button>
         </form>
+        <p className="search-help" onClick={ this.showAllBeers}>Click to view all</p>
       </div>
     )
   }

@@ -89,12 +89,11 @@ class App extends Component {
         <div className="inside-App">/
           <h1>Beer Findr</h1>
           <h2>Search Colorado's Best Beers</h2>
-          <div className="center Search-container">>
+          <div className="center Search-container">
             <Search
               beers={this.state.coloradoBeers}
               setSearchResults={this.setSearchResults}
             />
-            <p className="search-help">Search to view all</p>
           </div>
           
           <div className="Card-container">
