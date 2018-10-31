@@ -13,9 +13,9 @@ class SearchResults extends Component {
           })
           return (
             <div className="beer-card" data={beer.name} key={beer.name} onClick={this.props.changeView} >
+              <p className="beer-name">{beer.name}</p>
               <div className="beer-img" style={{ backgroundImage: `url(${beer.image})` }}></div>
-              <p>{beer.name}</p>
-              <p>{brewery.name}</p>
+              <p className="brewery">{brewery.name}</p>
             </div>
           )
         })}

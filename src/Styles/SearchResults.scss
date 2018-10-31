@@ -1,21 +1,38 @@
 .SearchResults {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(219px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
   grid-gap: 50px;
   margin: 50px;
 
   .beer-card {
     align-items: center;
     background: #7c1b0dbb;
-    border: solid 1px #000;
+    border: solid 5px #ffc107;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-  }
 
-  .beer-card > * {
-    color: #fff;
+    & > * {
+      color: #fff;
+    }
+
+    .brewery {
+      font-family: 'Monoton', cursive;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .beer-name {
+      font-family: 'Titan One', cursive;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    & :hover {
+      cursor: pointer;
+    }
   }
 
   .beer-img {
