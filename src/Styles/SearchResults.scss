@@ -1,0 +1,70 @@
+.SearchResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  grid-gap: 25px;
+  margin: 50px;
+  position: relative;
+
+  .beer-card {
+    align-items: center;
+    // background: #7c1b0dbb;
+    // border: solid 5px #ffc107;
+    background: #000;
+    border: solid .1px black;
+    // border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: -1px 1px 1px 1px rgb(74, 74, 74);
+
+    & > * {
+      color: #fff;
+    }
+
+    .brewery {
+      font-family: 'Monoton', cursive;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .beer-name {
+      font-family: 'Titan One', cursive;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    & :hover {
+      
+      cursor: pointer;
+    }
+  }
+
+  .beer-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.center-me {
+  display: flex;
+  justify-content: center;
+
+  .back-to-top {
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #ffc107;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+    transition: transform .1s linear;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: transform .1s linear;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
-import '../Styles/Search.css';
+import magnifier from '../assets/magnifier.svg';
+import '../Styles/Search.scss';
 
 class Search extends Component {
   constructor() {
@@ -11,26 +11,31 @@ class Search extends Component {
     }
   }
 
+  showAllBeers = (e) => {
+    this.props.setSearchResults(this.props.beers);
+  }
+
   searchBeers = (e) => {
     e.preventDefault()
-    //invoked when search button is clicked
-    let results = this.props.beers.filter((beer) => {
+    let results = this.search(this.state.searchQuery);
+    this.props.setSearchResults(results);
+  }
+
+  search = (searchQuery) => {
+    return this.props.beers.filter((beer) => {
 
       let styleIncludes = beer.style.find((style) => {
-        return style.toLowerCase().includes(this.state.searchQuery) 
+        return style.toLowerCase().includes(searchQuery)
       })
       let notesIncludes = beer.tastingNotes.find((note) => {
-        return note.toLowerCase().includes(this.state.searchQuery)
+        return note.toLowerCase().includes(searchQuery)
       })
 
       return styleIncludes || notesIncludes
     })
-
-    this.props.setSearchResults(results);
   }
 
   autoComplete = (e) => {
-    //completes user input as they type into search
     this.setState({
       searchQuery: e.target.value.toLowerCase()
     })
@@ -38,10 +43,15 @@ class Search extends Component {
 
   render() {
     return (
-      <form>
-        <input type="text" placeholder="Style or Taste Profile" onChange={ this.autoComplete } />
-        <button onClick={ this.searchBeers } >Search</button>
-      </form>
+      <div className="Search">
+        <form>
+          <input type="text" placeholder="Style or Taste Profile" onChange={ this.autoComplete } />
+          <button onClick={this.searchBeers} >
+            <img src={magnifier} alt=""/>
+          </button>
+        </form>
+        <p className="search-help" onClick={ this.showAllBeers}>Search to view all</p>
+      </div>
     )
   }
 }

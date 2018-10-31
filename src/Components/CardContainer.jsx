@@ -1,8 +1,7 @@
-import React, { Component, Fragment } from 'react';
-
-import '../Styles/CardContainer.css';
+import React, { Component } from 'react';
 import SearchResults from './SearchResults.jsx';
 import BeerProfile from './BeerProfile.jsx';
+import '../Styles/CardContainer.scss';
 
 class CardContainer extends Component {
   constructor(props) {
