@@ -13,6 +13,7 @@ class App extends Component {
       view: 0,
       coloradoBeers: [],
       coloradoBreweries: [],
+      selectedBeer: null
     }
   }
 
@@ -31,6 +32,33 @@ class App extends Component {
     this.setState({
       cardContainerVisible: visibility
     })
+  }
+
+  selectProfile = (e) => {
+    if (this.state.view === 1) {
+      this.selectBeer(e);
+      this.setState({
+        view: 2
+      })
+    } else if (this.state.view === 2) {
+      this.setState({
+        view: 1
+      })
+    }
+  }
+
+  selectBeer = (e) => {
+    let beerName = null;
+
+    if(e.target.classList.contains('beer-card'))
+      beerName = e.target.attributes.getNamedItem('data').value;
+    else {
+      beerName = e.target.parentElement.attributes.getNamedItem('data').value;
+    };
+
+    this.setState({
+      selectedBeer: beerName
+    });
   }
 
   componentDidMount() {
@@ -72,6 +100,8 @@ class App extends Component {
               results={this.state.searchResults} 
               breweries={this.state.coloradoBreweries}
               view={this.state.view}
+              changeView={this.selectProfile}
+              beerName={this.state.selectedBeer}
             />
           </div>
         </div>
