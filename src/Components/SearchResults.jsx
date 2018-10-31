@@ -6,15 +6,17 @@ class SearchResults extends Component {
   render() {
 
     return (
-      coloradoBeer.map((beer) => {
-        return (
-          <div className="beer-card">
-            <img className="beer-img" src={beer.image} />
-            <p>{beer.name}</p>
-            <p>Brewery</p>
-          </div>
-        )
-      })
+      <div class="SearchResults">
+        {coloradoBeer.map((beer) => {
+          return (
+            <div className="beer-card">
+              <div className="beer-img" style={{backgroundImage: `url(${beer.image})`}}></div>
+              <p>{beer.name}</p>
+              <p>Brewery</p>
+            </div>
+          )
+        })}
+      </div>
     )
   }
 }

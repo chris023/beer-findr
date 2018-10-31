@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import magnifier from '../assets/magnifier.svg';
 
 class Search extends Component {
   constructor() {
@@ -22,7 +23,9 @@ class Search extends Component {
       <div className="Search">
         <form>
           <input type="text" placeholder="Style or Taste Profile" onChange={ this.autoComplete } />
-          <button onClick={ this.searchBeers } >Search</button>
+          <button onClick={this.searchBeers} >
+            <img src={magnifier} alt=""/>
+          </button>
         </form>
       </div>
     )
