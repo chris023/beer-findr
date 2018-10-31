@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../Styles/Search.scss';
 
-import magnifier from '../assets/magnifier.svg'; 
+import magnifier from '../assets/magnifier.svg';
+import '../Styles/Search.scss';
 import Trie from '@ashtonkb/autocomplete';
 
 class Search extends Component {
