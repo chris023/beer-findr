@@ -13,7 +13,7 @@ class BeerProfile extends Component {
 
       return (
           <div onClick={this.props.changeView} className="beer-profile">
-            <img className="beer-img" src={profile.image} alt={profile.name} />
+            <img className="profile-img" src={profile.image} alt={profile.name} />
             <p>{profile.name}</p>
             <p>{brewery.name}</p>
             <p>{profile.abv}</p>

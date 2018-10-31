@@ -5,7 +5,7 @@ class SearchResults extends Component {
   render() {
     return (
 
-      <div class="SearchResults">
+      <div className="SearchResults">
         {this.props.results.map((beer) => {
           let brewery = this.props.breweries.find((brewery) => {
             return beer.breweryID === brewery.breweryID

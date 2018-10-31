@@ -1,0 +1,20 @@
+.BeerProfile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(219px, 1fr));
+  grid-gap: 50px;
+  margin: 50px;
+
+  .beer-profile {
+    align-items: center;
+    background: #7c1b0dbb;
+    border: solid 1px #000;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .beer-profile > * {
+    color: #fff
+  }
+}

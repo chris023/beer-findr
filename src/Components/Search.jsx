@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import magnifier from '../assets/magnifier.svg';
+
+import magnifier from '../assets/magnifier.svg'; 
+import Trie from '@ashtonkb/autocomplete';
 
 class Search extends Component {
   constructor() {
@@ -29,9 +31,27 @@ class Search extends Component {
   }
 
   autoComplete = (e) => {
-    //completes user input as they type into search
+    //1 instantiate a new Trie
+    let trie = new Trie();
+    //2 trie.populate it with whatever data a user can search for
+    let completableWords = this.props.beers.filter((beer) => {
+      let styles = beer.style.find((style) => {
+        return style.toLowerCase().includes(this.state.searchQuery) 
+      })
+      let notes = beer.tastingNotes.find((note) => {
+        return note.toLowerCase().includes(this.state.searchQuery)
+      })
+
+      return styles && notes
+    });
+    trie.populate(completableWords);
+    //3 the input that comes in from onchage event should be included in trie.suggest
+    let lettersToFind = e.target.value;
+    let searchSuggestions = trie.suggest(lettersToFind);
+    //4 save the suggestions as the state (autoSuggestions)
     this.setState({
-      searchQuery: e.target.value.toLowerCase()
+      autoSuggestions: searchSuggestions
+      // searchQuery: e.target.value.toLowerCase()
     })
   }
 
