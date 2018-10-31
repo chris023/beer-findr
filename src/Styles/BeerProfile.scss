@@ -1,0 +1,30 @@
+.BeerProfile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  background: #000000aa;
+  border: solid 1px #000;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  align-items: center;
+  height: 350px;
+
+  .profile-img {
+    margin: auto;
+    border: solid 1px #fff;
+    border-radius: 4px;
+    height: 90%;
+  }
+
+  .profile-name {
+    font-size: 1.6em;
+    margin: 24px;
+  }
+
+  .profile-notes {
+    
+  }
+
+}

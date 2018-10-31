@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import '../Styles/BeerProfile.scss';
 
 class BeerProfile extends Component {
@@ -13,13 +14,15 @@ class BeerProfile extends Component {
       })
 
       return (
-          <div onClick={this.props.changeView} className="beer-profile">
-            <img className="beer-img" src={profile.image} alt={profile.name} />
-            <p>{profile.name}</p>
-            <p>{brewery.name}</p>
-            <p>{profile.abv}</p>
-            <p>{profile.styles}</p>
-            <p>{profile.tastingNotes}</p> 
+          <div onClick={this.props.changeView} className="BeerProfile">
+            <img className="profile-img" src={profile.image} alt={profile.name} />
+            <div className="profile-content">
+              <p className="profile-name">{profile.name}</p>
+              <p>{brewery.name}</p>
+              <p>ABV: {profile.abv}%</p>
+              <p>{profile.styles}</p>
+              <p>{profile.tastingNotes}</p> 
+            </div>
           </div>
         )
   }
