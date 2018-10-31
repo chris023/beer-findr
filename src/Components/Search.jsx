@@ -1,44 +1,20 @@
 import React, { Component } from 'react';
 
 import '../Styles/Search.css';
-// import { coloradoBeer, coloradoBreweries } from '../beer-data';
 
 class Search extends Component {
   constructor() {
     super();
     this.state = {
       autoSuggestions: [],
-      coloradoBeers: [],
-      coloradoBreweries: [],
       searchQuery: ''
     }
-  }
-
-  componentDidMount() {
-    fetch('https://whateverly-datasets.herokuapp.com/api/v1/coloradoBeer')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          coloradoBeers: data.coloradoBeer,
-        })
-      })
-      .catch(error => console.log(error));
-
-    fetch('https://whateverly-datasets.herokuapp.com/api/v1/coloradoBreweries')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          coloradoBreweries: data.coloradoBreweries,
-        })
-      })
-      .catch(error => console.log(error))
-    
   }
 
   searchBeers = (e) => {
     e.preventDefault()
     //invoked when search button is clicked
-    let results = this.state.coloradoBeers.filter((beer) => {
+    let results = this.props.beers.filter((beer) => {
 
       let styleIncludes = beer.style.find((style) => {
         return style.toLowerCase().includes(this.state.searchQuery) 
