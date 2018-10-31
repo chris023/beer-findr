@@ -13,28 +13,25 @@ class Search extends Component {
     }
   }
 
-  showAllBeers = (e) => {
+  showAllBeers = () => {
     this.props.setSearchResults(this.props.beers);
   }
 
   searchBeers = (e) => {
-    e.preventDefault()
-    let results = this.search(this.state.searchQuery);
-    this.props.setSearchResults(results);
-  }
-
-  search = (searchQuery) => {
-    return this.props.beers.filter((beer) => {
+    e.preventDefault();
+    let results = this.props.beers.filter((beer) => {
 
       let styleIncludes = beer.style.find((style) => {
-        return style.toLowerCase().includes(searchQuery)
+        return style.toLowerCase().includes(this.state.searchQuery)
       })
       let notesIncludes = beer.tastingNotes.find((note) => {
-        return note.toLowerCase().includes(searchQuery)
+        return note.toLowerCase().includes(this.state.searchQuery)
       })
 
       return styleIncludes || notesIncludes
-    })
+    });
+
+    this.props.setSearchResults(results);
   }
 
   isNumeric(str) {
@@ -42,6 +39,10 @@ class Search extends Component {
   }
 
   autoComplete = (e) => {
+
+    this.setState({
+      searchQuery: e.target.value
+    })
     //1 instantiate a new Trie
     let trie = new Trie();
     //2 trie.populate it with whatever data a user can search for
