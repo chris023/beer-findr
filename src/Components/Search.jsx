@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import magnifier from '../assets/magnifier.svg';
 import '../Styles/Search.scss';
 

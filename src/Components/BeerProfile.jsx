@@ -18,10 +18,25 @@ class BeerProfile extends Component {
             <img className="profile-img" src={profile.image} alt={profile.name} />
             <div className="profile-content">
               <p className="profile-name">{profile.name}</p>
-              <p>{brewery.name}</p>
-              <p>ABV: {profile.abv}%</p>
-              <p>{profile.styles}</p>
-              <p>{profile.tastingNotes}</p> 
+              <p className="profile-brewery">{brewery.name}</p>
+              <p className="profile-abv">abv: {profile.abv}%</p>
+              <p>
+                {profile.style.map((style) => {
+                  return (
+                    <p className="profile-style">{style}</p>
+                  )
+                })}
+              </p>
+            </div>
+            <div>
+            <p>Tasting Notes:</p>
+            <ul>
+              {profile.tastingNotes.map((note) => {
+                return (
+                  <li className="profile-notes">{note}</li>  
+                )
+              })}
+            </ul>
             </div>
           </div>
         )
