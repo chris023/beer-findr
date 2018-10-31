@@ -8,10 +8,7 @@
     "react": "^16.5.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.5.2",
-    "react-pose": "^3.3.7",
     "react-scripts": "2.0.5",
-    "react-scroll": "^1.7.10",
-    "react-sticky": "^6.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
