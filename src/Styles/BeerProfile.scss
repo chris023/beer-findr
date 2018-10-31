@@ -1,6 +1,6 @@
 .BeerProfile {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
   background: #000000aa;
   border: solid 1px #000;
@@ -19,12 +19,27 @@
   }
 
   .profile-name {
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin: 24px;
+    margin-bottom: 0;
+  }
+
+  .profile-brewery {
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+  
+  .profile-style {
+    margin: 0;
   }
 
   .profile-notes {
-    
+    text-align: left;
+    margin: auto;
+    width: 50%;
+    font-size: .8em;
   }
+
+  
 
 }
