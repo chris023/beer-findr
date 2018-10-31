@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
-@import './styles/BeerProfile.scss';
-@import './styles/CardContainer.scss';
-@import './styles/Header.scss';
-@import './styles/Search';
-@import './styles/SearchResults.scss';
+// @import './styles/BeerProfile.scss';
+// @import './styles/CardContainer.scss';
+// @import './styles/Header.scss';
+// @import './styles/Search';
+// @import './styles/SearchResults.scss';
 
 
 .App {
@@ -13,7 +13,6 @@
   display: grid;
   grid-template-columns: 1fr;
   min-height: 100vh;
-  padding-top: 20vh;
 }
 
 .App::before {
@@ -22,7 +21,6 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  
 }
 
 .center {
@@ -41,6 +39,7 @@ h1{
   font-size: 64px;
   text-align: center;
   margin: 10px;
+  margin-top: 150px;
 }
 
 h2 {

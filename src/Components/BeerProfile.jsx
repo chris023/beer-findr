@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../Styles/BeerProfile.scss';
 
 class BeerProfile extends Component {
 
