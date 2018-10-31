@@ -1,4 +1,9 @@
 .SearchResults {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(219px, 1fr));
+  grid-gap: 50px;
+  margin: 50px;
+
   .beer-card {
     align-items: center;
     background: #7c1b0dbb;
