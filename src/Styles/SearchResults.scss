@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
   grid-gap: 25px;
   margin: 50px;
+  position: relative;
 
   .beer-card {
     align-items: center;
@@ -43,5 +44,27 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+
+.center-me {
+  display: flex;
+  justify-content: center;
+
+  .back-to-top {
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #ffc107;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+    transition: transform .1s linear;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: transform .1s linear;
+    }
   }
 }

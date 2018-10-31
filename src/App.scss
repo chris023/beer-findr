@@ -9,6 +9,36 @@
   display: grid;
   grid-template-columns: 1fr;
   min-height: 100vh;
+
+  h1{
+    color: #fff;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: black 0px 0px 18px;
+    font-size: 96px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 150px;
+  }
+
+  h2 {
+    color: #fff;
+    // text-shadow: black 0px 0px 18px;
+    text-shadow:
+          0.07em 0 black,
+          0 0.07em black,
+          -0.07em 0 black,
+          0 -0.07em black;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .search-help {
+    color: white;
+    text-align: center;
+    margin-top: -55px;
+    text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+    font-weight: 700;
+  }
 }
 
 .App::before {
@@ -22,31 +52,11 @@
 .center {
   align-items: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .inside-App {
   position: relative;
 }
 
-h1{
-  color: #fff;
-  font-family: 'Permanent Marker', cursive;
-  text-shadow: black 0px 0px 18px;
-  font-size: 96px;
-  text-align: center;
-  margin: 10px;
-  margin-top: 150px;
-}
-
-h2 {
-  color: #fff;
-  // text-shadow: black 0px 0px 18px;
-  text-shadow:
-        0.07em 0 black,
-        0 0.07em black,
-        -0.07em 0 black,
-        0 -0.07em black;
-  font-size: 22px;
-  text-align: center;
-}

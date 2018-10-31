@@ -13,7 +13,6 @@ class Search extends Component {
 
   searchBeers = (e) => {
     e.preventDefault()
-    //invoked when search button is clicked
     let results = this.props.beers.filter((beer) => {
 
       let styleIncludes = beer.style.find((style) => {
@@ -30,7 +29,6 @@ class Search extends Component {
   }
 
   autoComplete = (e) => {
-    //completes user input as they type into search
     this.setState({
       searchQuery: e.target.value.toLowerCase()
     })
