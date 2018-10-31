@@ -26,6 +26,7 @@ class CardContainer extends Component {
     return (
       <div className="card-container">
         <BeerProfile
+          changeView={this.props.changeView}
           beerName={this.props.beerName}
           results={this.props.results}
           breweries={this.props.breweries} 

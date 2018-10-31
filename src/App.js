@@ -35,6 +35,19 @@ class App extends Component {
   }
 
   selectProfile = (e) => {
+    if (this.state.view === 1) {
+      this.selectBeer(e);
+      this.setState({
+        view: 2
+      })
+    } else if (this.state.view === 2) {
+      this.setState({
+        view: 1
+      })
+    }
+  }
+
+  selectBeer = (e) => {
     let beerName = null;
 
     if(e.target.classList.contains('beer-card'))
@@ -46,16 +59,6 @@ class App extends Component {
     this.setState({
       selectedBeer: beerName
     });
-
-    if (this.state.view === 1) {
-      this.setState({
-        view: 2
-      })
-    } else {
-      this.setState({
-        view: 1
-      })
-    }
   }
 
   componentDidMount() {
