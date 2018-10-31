@@ -4,7 +4,7 @@
   justify-content: center; 
   margin-top: 30px;
   
-  form{
+  form {
     align-items: center;
     display: flex;
     min-width: 365px;
@@ -17,7 +17,8 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: none;
-    padding-left: 10px;
+    font-size: 18px;
+    padding-left: 15px;
   }
 
   button {
@@ -39,4 +40,26 @@
   img {
     width: 30px;
   }
+
+  .suggestion-box {
+    background: white;
+    margin-top: -9px;
+    width: 300px;
+    padding-left: 0;
+    border-radius: 5px;
+  }
+
+  .suggestion {
+    padding: 3px;
+    padding-left: 15px;
+    list-style-type: none;
+    border-top: solid 1px rgba(143, 143, 143, 0.262);
+    border-bottom: solid 1px rgba(143, 143, 143, 0.262);
+
+    &:hover {
+      background:  #ffc107af;
+      cursor: pointer;
+    }
+  }
+
 }

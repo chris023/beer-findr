@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../Styles/Search.scss';
 
 import magnifier from '../assets/magnifier.svg'; 
 import Trie from '@ashtonkb/autocomplete';
@@ -50,23 +51,46 @@ class Search extends Component {
     trie.populate(completableWords);
     //3 the input that comes in from onchage event should be included in trie.suggest
     let lettersToFind = e.target.value;
-    let searchSuggestions = trie.suggest(lettersToFind);
-    //4 save the suggestions as the state (autoSuggestions)
+    let searchSuggestions = [];
+    if (e.target.value !== '') {
+      searchSuggestions = trie.suggest(lettersToFind);
+      //4 save the suggestions as the state (autoSuggestions)
+      
+    }
     this.setState({
       autoSuggestions: searchSuggestions
-      // searchQuery: e.target.value.toLowerCase()
     })
+  }
+
+  chooseSuggestion(e) {
+    this.refs.searchBox.value = e.target.innerText;
+    this.setState({
+      autoSuggestions: []
+    });
   }
 
   render() {
     return (
       <div className="Search">
-        <form>
-          <input type="text" placeholder="Style or Taste Profile" onChange={ this.autoComplete } />
-          <button onClick={this.searchBeers} >
-            <img src={magnifier} alt=""/>
-          </button>
-        </form>
+        <div class="search-menu-wrapper">
+          <form>
+            <input ref="searchBox" type="text" placeholder="Style or Taste Profile" onChange={ this.autoComplete } />
+            <button onClick={this.searchBeers} >
+              <img src={magnifier} alt=""/>
+            </button>
+          </form>
+          {
+            this.state.autoSuggestions.length !== 0 && (
+              <ul className="suggestion-box">
+                {
+                  this.state.autoSuggestions.map((suggestion) => {
+                    return <li className="suggestion" onClick={this.chooseSuggestion.bind(this)}>{suggestion.toLowerCase()}</li>;
+                  })
+                }
+              </ul>
+            )
+          }
+        </div>
       </div>
     )
   }
