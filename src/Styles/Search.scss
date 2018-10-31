@@ -1,8 +1,11 @@
 .Search {
   width: 100%;
   display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: center; 
-  margin-top: 30px;
+  margin-top: 100px;
+  margin-bottom: 60px;
   
   form {
     align-items: center;
@@ -16,7 +19,7 @@
     height: 30px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    border: none;
+    border: solid 3px #ffc107;
     font-size: 18px;
     padding-left: 15px;
   }
@@ -29,24 +32,37 @@
     margin-left: -25px;
     background: #ffc107;
     transition: transform .2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: transform .2s;
+
+      &:active {
+        transform: scale(1.05);
+        transition: transform .05s linear;
+      }
+
+    }
   }
 
-  button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: transform .2s;
-  }
+  
 
   img {
     width: 30px;
   }
 
   .suggestion-box {
+    border: solid 3px #ffc107;
+    border-top: none;
+    position: absolute;
     background: white;
     margin-top: -9px;
     width: 300px;
     padding-left: 0;
     border-radius: 5px;
+    max-height: 216px;
+    overflow-y: scroll;
   }
 
   .suggestion {
@@ -62,4 +78,21 @@
     }
   }
 
+  .search-help {
+    color: white;
+    text-align: center;
+    text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+    font-weight: 700;
+    transition: transform .05s linear;
+
+    &:hover {
+      cursor: pointer;
+      color: #ddd;
+    }
+
+    &:active {
+      transform: scale(.98);
+      transition: transform .05s linear;
+    }
+  }
 }

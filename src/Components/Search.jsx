@@ -13,22 +13,32 @@ class Search extends Component {
     }
   }
 
+  showAllBeers = (e) => {
+    this.props.setSearchResults(this.props.beers);
+  }
+
   searchBeers = (e) => {
     e.preventDefault()
-    //invoked when search button is clicked
-    let results = this.props.beers.filter((beer) => {
+    let results = this.search(this.state.searchQuery);
+    this.props.setSearchResults(results);
+  }
+
+  search = (searchQuery) => {
+    return this.props.beers.filter((beer) => {
 
       let styleIncludes = beer.style.find((style) => {
-        return style.toLowerCase().includes(this.state.searchQuery) 
+        return style.toLowerCase().includes(searchQuery)
       })
       let notesIncludes = beer.tastingNotes.find((note) => {
-        return note.toLowerCase().includes(this.state.searchQuery)
+        return note.toLowerCase().includes(searchQuery)
       })
 
       return styleIncludes || notesIncludes
     })
+  }
 
-    this.props.setSearchResults(results);
+  isNumeric(str) {
+    return /^\d+$/.test(str) || str.includes(' ') || str === '';
   }
 
   autoComplete = (e) => {
@@ -52,7 +62,7 @@ class Search extends Component {
     //3 the input that comes in from onchage event should be included in trie.suggest
     let lettersToFind = e.target.value;
     let searchSuggestions = [];
-    if (e.target.value !== '') {
+    if (!this.isNumeric(e.target.value)) {
       searchSuggestions = trie.suggest(lettersToFind);
       //4 save the suggestions as the state (autoSuggestions)
       
@@ -90,6 +100,7 @@ class Search extends Component {
               </ul>
             )
           }
+          <p className="search-help" onClick={this.showAllBeers}>Click to view all</p>
         </div>
       </div>
     )

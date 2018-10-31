@@ -1,20 +1,30 @@
 .BeerProfile {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(219px, 1fr));
-  grid-gap: 50px;
-  margin: 50px;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  background: #000000aa;
+  border: solid 1px #000;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+  align-items: center;
+  height: 350px;
 
-  .beer-profile {
-    align-items: center;
-    background: #7c1b0dbb;
-    border: solid 1px #000;
+  .profile-img {
+    margin: auto;
+    border: solid 1px #fff;
     border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    height: 90%;
   }
 
-  .beer-profile > * {
-    color: #fff
+  .profile-name {
+    font-size: 1.6em;
+    margin: 24px;
   }
+
+  .profile-notes {
+    
+  }
+
 }

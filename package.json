@@ -6,6 +6,7 @@
     "@ashtonkb/autocomplete": "^1.2.0",
     "node-sass": "^4.9.4",
     "react": "^16.5.2",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"
   },
