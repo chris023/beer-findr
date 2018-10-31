@@ -7,7 +7,7 @@
   margin-top: 100px;
   margin-bottom: 60px;
   
-  form{
+  form {
     align-items: center;
     display: flex;
     min-width: 365px;
@@ -20,7 +20,8 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: solid 3px #ffc107;
-    padding-left: 10px;
+    font-size: 18px;
+    padding-left: 15px;
   }
 
   button {
@@ -31,16 +32,50 @@
     margin-left: -25px;
     background: #ffc107;
     transition: transform .2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: transform .2s;
+
+      &:active {
+        transform: scale(1.05);
+        transition: transform .05s linear;
+      }
+
+    }
   }
 
-  button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: transform .2s;
-  }
+  
 
   img {
     width: 30px;
+  }
+
+  .suggestion-box {
+    border: solid 3px #ffc107;
+    border-top: none;
+    position: absolute;
+    background: white;
+    margin-top: -9px;
+    width: 300px;
+    padding-left: 0;
+    border-radius: 5px;
+    max-height: 216px;
+    overflow-y: scroll;
+  }
+
+  .suggestion {
+    padding: 3px;
+    padding-left: 15px;
+    list-style-type: none;
+    border-top: solid 1px rgba(143, 143, 143, 0.262);
+    border-bottom: solid 1px rgba(143, 143, 143, 0.262);
+
+    &:hover {
+      background:  #ffc107af;
+      cursor: pointer;
+    }
   }
 
   .search-help {
@@ -48,5 +83,16 @@
     text-align: center;
     text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
     font-weight: 700;
+    transition: transform .05s linear;
+
+    &:hover {
+      cursor: pointer;
+      color: #ddd;
+    }
+
+    &:active {
+      transform: scale(.98);
+      transition: transform .05s linear;
+    }
   }
 }
