@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import '../'
+
+import '../Styles/BeerProfile.scss';
 
 class BeerProfile extends Component {
 
@@ -16,7 +17,7 @@ class BeerProfile extends Component {
           <div onClick={this.props.changeView} className="BeerProfile">
             <img className="profile-img" src={profile.image} alt={profile.name} />
             <div className="profile-content">
-              <p>{profile.name}</p>
+              <p className="profile-name">{profile.name}</p>
               <p>{brewery.name}</p>
               <p>ABV: {profile.abv}%</p>
               <p>{profile.styles}</p>

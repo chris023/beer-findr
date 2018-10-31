@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center; 
   margin-top: 30px;
+  margin-bottom: 60px;
   
   form{
     align-items: center;
@@ -16,7 +17,7 @@
     height: 30px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    border: none;
+    border: solid 3px #ffc107;
     padding-left: 10px;
   }
 
