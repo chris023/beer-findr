@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-import { coloradoBeer } from '../beer-data';
 
 class SearchResults extends Component {
 
   render() {
-
     return (
+
       <div class="SearchResults">
-        {coloradoBeer.map((beer) => {
+        {this.props.results.map((beer) => {
+          let brewery = this.props.breweries.find((brewery) => {
+            return beer.breweryID === brewery.breweryID
+          })
           return (
-            <div className="beer-card">
-              <div className="beer-img" style={{backgroundImage: `url(${beer.image})`}}></div>
+            <div className="beer-card" data={beer.name} key={beer.name} onClick={this.props.changeView} >
+              <img className="beer-img" src={beer.image} alt={beer.name} />
               <p>{beer.name}</p>
-              <p>Brewery</p>
+              <p>{brewery.name}</p>
             </div>
           )
         })}
