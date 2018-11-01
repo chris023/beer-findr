@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
 @import url("https://fonts.googleapis.com/css?family=Monoton");
-@import url("https://fonts.googleapis.com/css?family=Titan+One");
+@import url("https://fonts.googleapis.com/css?family=Adamina");
 
 .App {
   background-image: url('./assets/st-826688_1920.jpg');
@@ -21,13 +21,14 @@
 
   h2 {
     color: #fff;
-    // text-shadow: black 0px 0px 18px;
     text-shadow:
           0.07em 0 black,
           0 0.07em black,
           -0.07em 0 black,
           0 -0.07em black;
+    font-family: 'Adamina', serif;
     font-size: 22px;
+    letter-spacing: 1.5px;
     text-align: center;
   }
 }

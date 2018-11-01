@@ -20,6 +20,7 @@ class BeerProfile extends Component {
               <p className="profile-name">{profile.name}</p>
               <p className="profile-brewery">{brewery.name}</p>
               <p className="profile-abv">abv: {profile.abv}%</p>
+              <p>Style:</p>
               <p>
                 {profile.style.map((style) => {
                   return (
