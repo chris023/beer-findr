@@ -80,9 +80,11 @@
 
   .search-help {
     color: white;
+    font-weight: 700;
+    font-family: 'Adamina', serif;
+    letter-spacing: 1px;
     text-align: center;
     text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
-    font-weight: 700;
     transition: transform .05s linear;
 
     &:hover {

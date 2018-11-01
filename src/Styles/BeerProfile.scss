@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
-  background: #000000aa;
+  background: #000000cb;
   border: solid 1px #000;
   border-radius: 4px;
   color: #fff;
@@ -19,7 +19,6 @@
   }
 
   .profile-name {
-    font-size: 1.8em;
     margin: 24px;
     margin-bottom: 0;
   }
