@@ -13,4 +13,6 @@ This app is for both the average and enthusiastic beer drinker. You can search f
 - ![wireframe]()
 
 - This is the app in action:
-- ![snapshot]()
+- ![snapshot](beer-findr/src/assets/beerapp.png)
+- ![another snapshot](beer-findr/src/assets/search-beer.png)
+- ![another other snapshot](beer-findr/src/assets/beer-profile.png)
